@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1080.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.articleController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="80.0" prefWidth="383.0">
+               <children>
+                  <Label text="ADD ARTICLE:" textFill="#ee0077">
+                     <font>
+                        <Font name="Sitka Small Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="47.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="89.0" prefWidth="383.0">
+               <children>
+                  <Label text="REF:" textFill="#ee0077">
+                     <HBox.margin>
+                        <Insets left="92.0" top="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Perpetua Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idAField" prefHeight="26.0" prefWidth="189.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="49.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="383.0">
+               <children>
+                  <Label text="Brand:" textFill="#ee0077">
+                     <font>
+                        <Font name="Perpetua Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="marqueField" prefHeight="26.0" prefWidth="189.0">
+                     <HBox.margin>
+                        <Insets left="18.0" top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="48.0" prefWidth="383.0">
+               <children>
+                  <Label text="Items in Stock:" textFill="#ee0077">
+                     <font>
+                        <Font name="Perpetua Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="18.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="stockField" prefHeight="26.0" prefWidth="189.0">
+                     <HBox.margin>
+                        <Insets left="16.0" top="7.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="383.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="51.0" text="Price:" textFill="#ee0077">
+                     <font>
+                        <Font name="Perpetua Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="prixField" prefHeight="26.0" prefWidth="189.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="7.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="380.0">
+               <children>
+                  <Label text="Category:" textFill="#ee0077">
+                     <font>
+                        <Font name="Perpetua Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboBox" prefHeight="26.0" prefWidth="186.0">
+                     <HBox.margin>
+                        <Insets left="16.0" top="1.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="380.0">
+               <children>
+                  <Label text="Size:" textFill="#ee0077">
+                     <font>
+                        <Font name="Perpetua Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="taillePointureField" prefHeight="26.0" prefWidth="189.0">
+                     <HBox.margin>
+                        <Insets left="16.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="1.0" prefWidth="380.0" />
+            <HBox prefHeight="68.0" prefWidth="380.0" VBox.vgrow="SOMETIMES">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: EE0077; -fx-background-radius: 10;" text="Delete" textFill="#eeedff">
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Sitka Small Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#mettreAJour" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: EE0077; -fx-background-radius: 10;" text="Modify" textFill="#eeedff">
+                     <font>
+                        <Font name="Sitka Small Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="21.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ajouter" style="-fx-background-color: EE0077; -fx-background-radius: 10;" text="Insert" textFill="#eeedff">
+                     <font>
+                        <Font name="Sitka Small Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="21.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="380.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#CategorieVue" prefHeight="32.0" prefWidth="114.0" style="-fx-background-color: transparent;" text="Add Category" textFill="#c90567" underline="true">
+                     <font>
+                        <Font name="Sitka Small Italic" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Line endX="-101.55130004882812" endY="-350.4224853515625" startX="-100.87814331054688" startY="-7.828704833984375" stroke="#eeedff" strokeLineCap="BUTT" strokeWidth="2.0" BorderPane.alignment="CENTER" />
+   </center>
+   <padding>
+      <Insets right="700.0" />
+   </padding>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="TableView" layoutX="-75.0" prefHeight="337.0" prefWidth="632.0" translateX="100.0" translateY="100.0">
+               <columns>
+                  <TableColumn fx:id="idAColumn" maxWidth="100.0" prefWidth="75.0" text="REF" />
+                  <TableColumn fx:id="marqueColumn" maxWidth="100.0" prefWidth="75.0" text="Brand" />
+                  <TableColumn fx:id="stockColumn" maxWidth="100.0" prefWidth="75.0" text="Items In Stock" />
+                  <TableColumn fx:id="prixColumn" maxWidth="100.0" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="categorieColumn" maxWidth="100.0" prefWidth="75.0" text="Category" />
+                  <TableColumn fx:id="taillePointureColumn" maxWidth="100.0" prefWidth="75.0" text="Size" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="665.0">
+               <children>
+                  <Label text="LIST OF ARTICLES:" textFill="#ee0077">
+                     <font>
+                        <Font name="Sitka Small Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="47.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#ServerView" style="-fx-background-color: EE0077; -fx-background-radius: 10;" text="Messages" textFill="#eeedff">
+                     <HBox.margin>
+                        <Insets left="325.0" top="45.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Perpetua Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>
